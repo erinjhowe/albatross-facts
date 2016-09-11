@@ -1,0 +1,101 @@
+body{
+	font-size: 16px;
+	line-height: 1.2em;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	background-color: #deeaf8;/* #c5d3da*/
+}
+
+/************* fonts ******************/
+h1{
+	font-size:3em;
+	color: #273b64;
+	font-family: Georgia,Times,"Times New Roman",serif;
+	padding: 1em 0;
+}
+
+h2{
+	font-size: 2.3em;
+	color: #cc2b2b;
+	font-family: Georgia,Times,"Times New Roman",serif;
+	text-align: center;
+	padding-bottom: .5em;
+}
+
+/************* untility ***************/
+
+.header-container, .section-container, .footer-container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/************* header ******************/
+
+.header-container{
+	height: 100px;
+}
+
+
+
+/************ weekly fact ***********************/
+
+figure{
+	margin:0 230px;
+	padding-bottom: 6em;
+}
+
+.weekly-fact{
+	padding: 1em 0;
+}
+
+figcaption{
+	font-size: 1.5em;
+	text-align: center;
+	color:#f24130;
+	line-height: 1.3em; 
+	padding: 1em;
+	padding-bottom: .5em;
+}
+
+.non-fact-p{
+	width: 450px;
+	float: left;
+	font-size: 1.2em;
+	line-height: 1.2em;
+
+}
+
+.non-fact-i{
+	float: right;
+}
+
+.non-fact-i .wandering-albatross, .wandering-albatross figcaption{
+	margin: 0;
+	padding: 0;
+}
+
+/*************** info **************/
+.albatross-information{
+	font-size: 1.2em;
+	line-height: 1.3em;
+	padding-top: 3em;
+}
+
+.true-fact-one{
+	width: 420px;
+	float: left;
+	padding: 10px;
+}
+
+.true-fact-two{
+	width: 420px;
+	float: right;
+	padding: 10px;
+}
+
+/************** footer ******************/
+.footer-container{
+	padding: 40px;
+	text-align: center;
+	color: #444;
+}
