@@ -95,7 +95,18 @@ figcaption{
 
 /************** footer ******************/
 .footer-container{
-	padding: 40px;
+	padding-top: 40px;
+	padding-bottom: 10px;
 	text-align: center;
 	color: #444;
+}
+
+.resources{
+	padding-top: 20px;
+}
+
+.resources a{
+	text-decoration: none;
+	color:#273b64;
+
 }
