@@ -103,7 +103,8 @@ figcaption{
 
 /************** footer ******************/
 .footer-container{
-	padding: 40px;
+	padding-top: 40px;
+	padding-bottom: 10px;
 	text-align: center;
 	color: #444;
 }
@@ -116,4 +117,8 @@ figcaption{
 	text-decoration: none;
 	color:#273b64;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
