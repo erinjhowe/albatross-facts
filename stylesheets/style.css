@@ -42,6 +42,13 @@ p{
 
 /************ weekly fact ***********************/
 
+.fact{
+	width: 700px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 2px;
+}
+
 figure{
 	margin:0 230px;
 	padding-bottom: 4em;
