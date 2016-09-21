@@ -56,6 +56,10 @@ figure{
 	
 }
 
+figure img{
+	border-radius: 2px;
+}
+
 .weekly-fact{
 	padding: 1em 0;
 }
