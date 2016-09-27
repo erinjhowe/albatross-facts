@@ -156,7 +156,7 @@ figcaption{
 
 /*************** Responsive ***********/
 
-@media(max-width: 600px){
+@media(max-width: 520px){
 
 	.header-container, .section-container, .footer-container{
 	width: 100%;
@@ -191,6 +191,7 @@ figcaption{
 	.wandering-albatross img{
 		float: none;
 		width: 98.6%;
+		margin: 0 auto;
 		padding-top: 4%;
 		
 	}
@@ -225,7 +226,52 @@ figcaption{
 
 }
 
-/*@media(max-width: 800px){
+@media(max-width: 730px){
+
+	.header-container, .section-container, .footer-container{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.fact{
+		width:100%; 
+	}
+
+	.wandering-albatross img{
+		float: none;
+		width: 100%;
+		padding-top: 4%;
+		
+	}
+
+
+	h2{
+		line-height:1em;
+		padding: 1.6%;
+	}
+
+	.weekly-fact{
+		width: 98.6%; 
+		padding: 10% 1.6%;
+	}
+
+	.true-fact-one, .true-fact-two{
+		width: 94%;
+		float: none;
+		padding: 1.6% 3%;
+	}
+
+	.footer-container{
+		padding: 1.6%;
+		width: 98.6%;
+	
+	}
+
+
+
+}
+
+@media(max-width: 960px){
 
 	.header-container, .section-container, .footer-container{
 		width: 100%;
@@ -236,12 +282,41 @@ figcaption{
 		left:20%;
 	}
 
+	.weekly-fact{
+		width: 98.6%; 
+		padding: 5% 1.6%;
+		padding-bottom: 0;
+	}
+
 
 	.fact{
-		max-width: 800px;
-		margin: 0px;
-	}*/
+		max-width: 700px;
 
+	}
+
+	figure{
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.non-fact-p{
+		width: 70%;
+		margin: 0 auto;
+		float:none;
+
+	}
+
+	.wandering-albatross img{
+		float: none;
+		padding-top: 4%;
+		
+	}
+
+	.true-fact-one, .true-fact-two{
+		width: 94%;
+		float: none;
+		padding: 1.6% 3%;
+	}
 
 
 
