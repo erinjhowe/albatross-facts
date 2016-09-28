@@ -67,7 +67,7 @@ header{
 }
 
 
-figure{
+.fact figure{
 	margin:0 100px;
 	padding-bottom: 4em;
 	
@@ -80,10 +80,10 @@ figure img{
 .weekly-fact{
 	background-color:#B0BEC5;
 	width: 100%; 
-	padding: 100px 20px;
+	padding: 50px 20px;
 }
 
-figcaption{
+.fact figcaption{
 	font-size: 1.3em;
 	text-align: center;
 	color:#cc2b2b;
@@ -91,26 +91,47 @@ figcaption{
 	padding-bottom: .5em;
 }
 
+.wandering figcaption{
+	width: 640px;
+	font-size: 1.3em;
+	text-align: center;
+	color:#cc2b2b;
+	line-height: 1.3em; 
+	padding-bottom: .5em;
+}
+
+
 .non-fact-p{
-	width: 460px;
-	float: left;
+	width: 600PX;
 	font-size: 1.1em;
 	line-height: 1.2em;
+	text-align: center;
+	margin: 0 auto;
 
 }
 
-.wandering-albatross img{
-	float: left;
-	width: 450px;
+.wandering{
+	width: 500px;
+	margin: 0 160px;
 }
 
-.non-fact-i{
-	float: right;
+.wandering figure{
+	width: 500PX;
+	margin: 0 auto;
+	padding-top: 50px;
 }
 
-.non-fact-i .wandering-albatross, .wandering-albatross figcaption{
+
+/*
+.wandering-albatross, .wandering-albatross figcaption{
 	margin: 0;
 	padding: 0;
+}
+
+figcaption:nth-of-type(2){
+	float: none;
+	height: auto;
+
 }
 
 /*************** info **************/
@@ -155,8 +176,131 @@ figcaption{
 }
 
 /*************** Responsive ***********/
+@media(max-width: 960px){
+
+	.header-container, .section-container, .footer-container{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	h1{
+		left:20%;
+	}
+
+	.weekly-fact{
+		width: 98.6%; 
+		padding: 5% 1.6%;
+		padding-bottom: 0;
+	}
+
+
+	.fact{
+		max-width: 700px;
+
+	}
+
+	.wandering figure, .wandering figcaption{
+		max-width: 450px;
+	
+	}
+
+	.wandering figcaption{
+		padding-bottom: 50px;
+	}
+
+	.wandering{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.wandering figure{
+		width: 500PX;
+		margin: 0 auto;
+		padding-top: 0px;
+	}
+
+	.non-fact-p{
+		width: 70%;
+		margin: 0 auto;
+		float:none;
+
+	}
+
+	.wandering-albatross img{
+		float: none;
+		padding-top: 4%;
+		width: 450px;
+		
+	}
+
+	.true-fact-one, .true-fact-two{
+		width: 94%;
+		float: none;
+		padding: 1.6% 3%;
+	}
+
+
+}
+
+@media(max-width: 730px){
+
+	.wandering figcaption{
+		padding-bottom: 0px;
+	}
+
+	.header-container, .section-container, .footer-container{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.fact{
+		width:100%; 
+	}
+
+	.wandering-albatross img{
+		float: none;
+		width: 450px;
+		padding-top: 4%;
+		
+	}
+
+	.fact figure img{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+
+	h2{
+		line-height:1em;
+		padding: 1.6%;
+	}
+
+	.weekly-fact{
+		width: 98.6%; 
+		padding: 10% 1.6%;
+	}
+
+	.true-fact-one, .true-fact-two{
+		width: 94%;
+		float: none;
+		padding: 1.6% 3%;
+	}
+
+	.footer-container{
+		padding: 1.6%;
+		width: 98.6%;
+	
+	}
+
+
+}
 
 @media(max-width: 520px){
+
+	.wandering figure, .wandering figcaption{
+		width: 100%;
+	
+	}
 
 	.header-container, .section-container, .footer-container{
 	width: 100%;
@@ -168,7 +312,7 @@ figcaption{
 		left: 12%;
 	}
 
-	figure{
+	.fact figure{
 		margin: 0px;
 		padding-bottom: 10%;
 	}
@@ -226,101 +370,4 @@ figcaption{
 
 }
 
-@media(max-width: 730px){
 
-	.header-container, .section-container, .footer-container{
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.fact{
-		width:100%; 
-	}
-
-	.wandering-albatross img{
-		float: none;
-		width: 100%;
-		padding-top: 4%;
-		
-	}
-
-
-	h2{
-		line-height:1em;
-		padding: 1.6%;
-	}
-
-	.weekly-fact{
-		width: 98.6%; 
-		padding: 10% 1.6%;
-	}
-
-	.true-fact-one, .true-fact-two{
-		width: 94%;
-		float: none;
-		padding: 1.6% 3%;
-	}
-
-	.footer-container{
-		padding: 1.6%;
-		width: 98.6%;
-	
-	}
-
-
-
-}
-
-@media(max-width: 960px){
-
-	.header-container, .section-container, .footer-container{
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	h1{
-		left:20%;
-	}
-
-	.weekly-fact{
-		width: 98.6%; 
-		padding: 5% 1.6%;
-		padding-bottom: 0;
-	}
-
-
-	.fact{
-		max-width: 700px;
-
-	}
-
-	figure{
-		max-width: 500px;
-		margin: 0 auto;
-	}
-
-	.non-fact-p{
-		width: 70%;
-		margin: 0 auto;
-		float:none;
-
-	}
-
-	.wandering-albatross img{
-		float: none;
-		padding-top: 4%;
-		
-	}
-
-	.true-fact-one, .true-fact-two{
-		width: 94%;
-		float: none;
-		padding: 1.6% 3%;
-	}
-
-
-
-
-
-
-}
