@@ -16,25 +16,26 @@ h1{
 	left: 25%;
 }
 
-h2{
-	padding: 20px 0px;
+/*	h2{
+padding: 20px 0px;
 	font-size: 2.3em;
 	color: #cc2b2b;
 	font-family: Georgia,Times,"Times New Roman",serif;
+	padding-bottom:40px;
 	text-align: center;
 }
-
+/*
 .htwo h2{
 	padding-top: 10px;
 }
 
-p{
-	padding-top: 10px;
-}
-
+h2
 /************* untility ***************/
 
-.header-container, .section-container, .footer-container{
+h2{
+	color: #cc2b2b;
+}
+.header-container /*.section-container, .footer-container*/{
 	width: 960px;
 	margin: 0 auto;
 }
@@ -59,12 +60,12 @@ header{
 
 /************ weekly fact ***********************/
 
-.fact{
+/*.fact{
 	width: 700px;
 	margin: 40px auto;
 	background-color: #ECEFF1;
 	border-radius: 2px;
-}
+}*/
 
 
 .fact figure{
@@ -80,39 +81,26 @@ figure img{
 .weekly-fact{
 	background-color:#B0BEC5;
 	width: 100%; 
-	padding: 50px 20px;
+	padding: 30px 0px;
+	font-size: 18px;
+	line-height: 1.3em;
 }
 
-.fact figcaption{
-	font-size: 1.3em;
-	text-align: center;
-	color:#cc2b2b;
-	line-height: 1.3em; 
-	padding-bottom: .5em;
-}
-
-.wandering figcaption{
-	width: 640px;
-	font-size: 1.3em;
-	text-align: center;
-	color:#cc2b2b;
-	line-height: 1.3em; 
-	padding-bottom: .5em;
+.white{
+	width: 100%; 
+	padding: 30px 0px;
+	font-size: 18px;
+	line-height: 1.3em;
 }
 
 
-.non-fact-p{
-	width: 600PX;
-	font-size: 1.1em;
-	line-height: 1.2em;
-	text-align: center;
-	margin: 0 auto;
 
-}
+
 
 .wandering{
 	width: 500px;
 	margin: 0 160px;
+
 }
 
 .wandering figure{
@@ -135,11 +123,11 @@ figcaption:nth-of-type(2){
 }
 
 /*************** info **************/
-.albatross-information{
+/*.albatross-information{
 	font-size: 1.2em;
 	line-height: 1.3em;
 	padding: 3em 0;
-}
+}*/
 
 .true-fact-one{
 	width: 420px;
@@ -178,7 +166,7 @@ figcaption:nth-of-type(2){
 /*************** Responsive ***********/
 @media(max-width: 960px){
 
-	.header-container, .section-container, .footer-container{
+	.header-container{
 		width: 100%;
 		margin: 0 auto;
 	}
@@ -248,7 +236,7 @@ figcaption:nth-of-type(2){
 		padding-bottom: 0px;
 	}
 
-	.header-container, .section-container, .footer-container{
+	.header-container {
 		width: 100%;
 		margin: 0 auto;
 	}
