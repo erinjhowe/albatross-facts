@@ -17,24 +17,99 @@
      function gotoDun(){
      	var mapOptions ={
      		center: new google.maps.LatLng(-45.776154, 170.729020),
-     		zoom: 12, // from 0 - 23 for most of the mapped earth surface
+     		zoom: 15, // from 0 - 23 for most of the mapped earth surface
+     		mapTypeControl: false,
      		mapTypeId: google.maps.MapTypeId.ROADMAP //Types: HYBRID , TERRAIN, ROADMAP, SATELLITE
 
      	};
+
+     	var customStyle = [{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"color":"#e038e0"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#2272c7"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#8d9899"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]}];
+
      	var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-     };
+     	map.setOptions({styles:customStyle});
+
+        var myMarker = new google.maps.Marker({
+          position: new google.maps.LatLng(-45.776154, 170.729020),
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon:"images/icon.png",
+          title: "Royal Albatross Centre"
+        });
+
+      var myAtomicBlastRadius = {
+        strokeColor: "#2272c7",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#2272c7",
+        fillOpacity: 0.45,
+        map: map,
+        center: new google.maps.LatLng(-45.776154, 170.729020),
+        radius: 100
+      };
+
+      var cityCircle = new google.maps.Circle(myAtomicBlastRadius);
+
+
+       //STEP 1: Find the info window
+
+       var myInfoWindow = new google.maps.InfoWindow({
+          content:"<div style=\"width:150px;height:80 px;font-family:Arial;\">Royal Albatross Centre -  Otago Peninsula, Dunedin New Zealand</div>"
+       });
+
+       myInfoWindow.open(map, myMarker); //open as soon as window loads
+
+     }; // \gotoDun
 
 
      function gotoFal(){
       var mapOptions ={
         center: new google.maps.LatLng(-1.374590, -89.672332),
-        zoom: 12, // from 0 - 23 for most of the mapped earth surface
-        mapTypeId: google.maps.MapTypeId.ROADMAP //Types: HYBRID , TERRAIN, ROADMAP, SATELLITE
+        zoom: 7, // from 0 - 23 for most of the mapped earth surface
+        mapTypeId: google.maps.MapTypeId.SATELLITE, //Types: HYBRID , TERRAIN, ROADMAP, SATELLITE
+        streetViewControl: false,
       };
       var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-     };
+      var myBounds = new google.maps.LatLngBounds(
+          new google.maps.LatLng(-1.291528, -89.764000),
+          new google.maps.LatLng(-1.432079, -89.607101)
+
+        );
+
+      var rectOptions = {
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+        map: map,
+        bounds: myBounds
+
+      };
+
+      var myRectangle = new google.maps.Rectangle(rectOptions);
+
+
+
+      var myMarkerTwo = new google.maps.Marker({
+          position: new google.maps.LatLng(-1.374590, -89.672332),
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon:"images/icon2.png",
+          title: "Royal Albatross Centre"
+        });
+
+
+       //STEP 1: Find the info window
+
+       var myInfoWindow = new google.maps.InfoWindow({
+          content:"<div style=\"width:130px;height:80 px;font-family:Arial;\">Española Island - Galapagos Islands, Ecuador</div>"
+       });
+
+       myInfoWindow.open(map, myMarkerTwo); //open as soon as window loads
+
+     }; //\gotoFal
 
      google.maps.event.addDomListener(window, 'load', gotoDun);
 
@@ -153,8 +228,8 @@
 						<h3>Nesting Colonies</h3>
 						<p>Albatrosses nest on remote islands, usually exposed to make approaching from the sea easy. Some species of albatross like to nest under trees, some prefer dense colonies, and other species like widely spaced nests. Most albatrosses will usually return to the colony where they were born to nest.</p>
 						<p>There are a few accessible albatross nesting colonies. If you promise to follow all the rules and not disturb these super cool birds, we will tell you where you can visit to see one.</p>
-						<a href="javascript:gotoDun()">Dunedin</a><br>
-			    		<a href="javascript:gotoFal()">Española Island</a><br>
+						<a href="javascript:gotoDun()">New Zealand</a><br>
+			    		<a href="javascript:gotoFal()">Galapagos Islands</a><br>
 					</div>
 				</div>
 			</div>
