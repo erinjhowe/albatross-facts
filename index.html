@@ -66,12 +66,17 @@
       var mapOptions ={
         center: new google.maps.LatLng(-1.374590, -89.672332),
         zoom: 7, // from 0 - 23 for most of the mapped earth surface
-        mapTypeId: google.maps.MapTypeId.SATELLITE, //Types: HYBRID , TERRAIN, ROADMAP, SATELLITE
+        mapTypeId: google.maps.MapTypeId.ROADMAP, //Types: HYBRID , TERRAIN, ROADMAP, SATELLITE
         streetViewControl: false,
       };
+
+      	var customStyle = [{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"color":"#e038e0"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#2272c7"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#8d9899"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]}];
+
       var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-      var myBounds = new google.maps.LatLngBounds(
+      map.setOptions({styles:customStyle});
+
+    /*  var myBounds = new google.maps.LatLngBounds(
           new google.maps.LatLng(-1.291528, -89.764000),
           new google.maps.LatLng(-1.432079, -89.607101)
 
@@ -88,7 +93,7 @@
 
       };
 
-      var myRectangle = new google.maps.Rectangle(rectOptions);
+      var myRectangle = new google.maps.Rectangle(rectOptions);*/
 
 
 
@@ -96,9 +101,22 @@
           position: new google.maps.LatLng(-1.374590, -89.672332),
           map: map,
           animation: google.maps.Animation.DROP,
-          icon:"images/icon2.png",
+          icon:"images/icon.png",
           title: "Royal Albatross Centre"
         });
+
+       var myAtomicBlastRadius = {
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 1,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+        map: map,
+        center: new google.maps.LatLng(-1.374590, -89.672332),
+        radius: 20000
+      };
+
+      var cityCircle = new google.maps.Circle(myAtomicBlastRadius)
 
 
        //STEP 1: Find the info window
